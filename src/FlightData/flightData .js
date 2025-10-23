@@ -10,6 +10,7 @@ const flightData = [
         duration: "5h 30m",
         departureTime: "2025-10-10T08:00:00",
         arrivalTime: "2025-10-10T14:30:00",
+        cancelationpolicy: "not refuntable"
     },
     {
         airlineName: "British Airways",
@@ -20,6 +21,7 @@ const flightData = [
         duration: "10h 45m",
         departureTime: "2025-10-12T17:30:00",
         arrivalTime: "2025-10-13T08:15:00",
+        cancelationpolicy: " refuntable with charge"
     },
     {
         airlineName: "Emirates",
@@ -30,6 +32,7 @@ const flightData = [
         duration: "7h 25m",
         departureTime: "2025-10-15T22:00:00",
         arrivalTime: "2025-10-16T11:25:00",
+        cancelationpolicy: " refuntable with charge"
     },
     {
         airlineName: "Qantas",
@@ -40,6 +43,7 @@ const flightData = [
         duration: "9h 20m",
         departureTime: "2025-10-17T06:15:00",
         arrivalTime: "2025-10-17T18:35:00",
+        cancelationpolicy: " refuntable with charge"
     },
     {
         airlineName: "Air France",
@@ -50,6 +54,7 @@ const flightData = [
         duration: "1h 45m",
         departureTime: "2025-10-20T10:00:00",
         arrivalTime: "2025-10-20T11:45:00",
+        cancelationpolicy: "not refuntable "
     },
     {
         airlineName: "Delta Airlines",
@@ -60,6 +65,7 @@ const flightData = [
         duration: "4h 10m",
         departureTime: "2025-10-22T09:00:00",
         arrivalTime: "2025-10-22T13:10:00",
+        cancelationpolicy: " refuntable with charge"
     },
     {
         airlineName: "Air Canada",
@@ -70,6 +76,7 @@ const flightData = [
         duration: "1h 30m",
         departureTime: "2025-10-25T12:30:00",
         arrivalTime: "2025-10-25T14:00:00",
+        cancelationpolicy: " refuntable with charge"
     }
 ];
 

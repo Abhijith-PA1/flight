@@ -9,6 +9,7 @@ function Flightdetails() {
   const [minPrice, setMinPrice] = useState();
   const [maxPrice, setMaxPrice] = useState();
   const [sortOrder, setSortOrder] = useState("asc");
+  const [isRefundable, setIsRefundable] = useState(null);
 
   // Function to handle sorting of the data
   const handleSort = (order) => {
@@ -33,6 +34,22 @@ function Flightdetails() {
       const price = parseFloat(flight.price.replace("$", ""));
       return price >= minPrice && price <= maxPrice;
     });
+    setSortedData(filteredFlights);
+  };
+
+  // Function to handle filter by refundable or not refundable
+  const handlefunts = (refundStatus) => {
+    setIsRefundable(refundStatus);
+
+    const filteredFlights = flightData.filter((flight) => {
+      if (refundStatus === "notRefundable") {
+        return flight.cancelationpolicy === "not refuntable";
+      } else if (refundStatus === "refundable") {
+        return flight.cancelationpolicy === " refuntable with charge";
+      }
+      return true; // No filter applied
+    });
+
     setSortedData(filteredFlights);
   };
 
@@ -114,6 +131,24 @@ function Flightdetails() {
               >
                 Apply Filter
               </button>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="refundPolicy"
+                className="radio m-2"
+                onClick={() => handlefunts("notRefundable")}
+                checked={isRefundable === "notRefundable"}
+              />{" "}
+              Not Refundable
+              <input
+                type="radio"
+                name="refundPolicy"
+                className="radio m-2"
+                onClick={() => handlefunts("refundable")}
+                checked={isRefundable === "refundable"}
+              />{" "}
+              Refundable with Charge
             </div>
             {/* Display the filtered and sorted cards */}
             {sortedData.map((flight, index) => (
